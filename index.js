@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.post('/bfhl', (req, res) => {
     const { data } = req.body;
-
+    console.log(data);
     if (!data) {
         return res.status(400).json({
             is_success: false,
