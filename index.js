@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
+const cors = require('cors');
+app.use(cors());
 app.post('/bfhl', (req, res) => {
     const { data } = req.body;
     console.log(data);
